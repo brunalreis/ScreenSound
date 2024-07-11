@@ -33,7 +33,7 @@ class Musica
     public void FichaTecnica()
     {
         Console.WriteLine($"Nome da faixa: {NomeMusica}");
-        Console.WriteLine($"Artista: {Artista}");
+        Console.WriteLine($"Artista: {Artista.NomeBanda}");
         Console.WriteLine($"Duração: {Duracao}");
         if (Disponivel == true)
         {
