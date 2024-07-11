@@ -5,7 +5,7 @@ public class Episodios
     public int Ordem { get; }
     public string Resumo => $"{Ordem}. {Titulo} ({EpDuracao} min) - {string.Join(", ", convidados)}";
     public string Titulo { get; }
-    public Episodios(int epDuracao, int ordem, string titulo)
+    public Episodios(int ordem, string titulo, int epDuracao)
     {
         EpDuracao = epDuracao;
         Ordem = ordem;

@@ -3,38 +3,26 @@ public class Podcast
     private List<Episodios> episodios = new List<Episodios>();
     public string Host { get; }
     public string NomePod { get; }
-    public int TotalEpisodios
-    {
-        get
-        {
-            return episodios.Count();
-        }
-    }
+    public int TotalEpisodios => episodios.Count();
 
-    public Podcast(string host, string nomePod)
+    public Podcast(string nomePod, string host)
     {
         Host = host;
         NomePod = nomePod;
     }
 
-    public void AdicionarEpisodio(Episodios Titulo)
+    public void AdicionarEpisodio(Episodios episodio)
     {
-        episodios.Add(Titulo);
+        episodios.Add(episodio);
     }
 
-    public string ExibirDetalhes()
+    public void ExibirDetalhes()
     {
-        char s;
-        if (TotalEpisodios > 1)
+        Console.WriteLine($"Podcast: {NomePod}, apresentado por {Host}. Contém {TotalEpisodios} episódios.\n");
+        foreach (Episodios episodio in episodios.OrderBy(e => e.Ordem))
         {
-            s = 's';
-
+            Console.WriteLine(episodio.Resumo);
         }
-        else
-        {
-            s = ' ';
-        }
-        return $"Podcast: {NomePod}, apresentado por {Host}. Contém {TotalEpisodios} episódio{s}. ";
 
     }
 
