@@ -1,4 +1,5 @@
 using System.Diagnostics.Contracts;
+namespace ScreenSound.Modelos;
 
 class Musica
 {
