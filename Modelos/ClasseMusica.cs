@@ -1,7 +1,7 @@
 using System.Diagnostics.Contracts;
 namespace ScreenSound.Modelos;
 
-class Musica
+internal class Musica
 {
     public string NomeMusica { get; }
     public Banda Artista { get; }
